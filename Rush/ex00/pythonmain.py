@@ -1,11 +1,11 @@
 # main.py
 from typing import List, Dict
 
-class Farmtask:
+class FarmTask:
     def __init__(self, name: str, date: str, task_type: str):
         self.name = name
         self.date = date
-        self.task = task_type
+        self.task_type = task_type
 
 class TaskManager:
     def __init__(self):
@@ -23,9 +23,9 @@ class TaskManager:
             print ("ยังไม่มีงานในรายการ")
             return
 
-            print("\nรายการงานทั้งหมด:")
-            for i, task in enumerate(self.tasks, 1):
-                print(f"{i}. {task.date} - {task.name} ({task.task_type})")
+        print("\nรายการงานทั้งหมด:")
+        for i, task in enumerate(self.tasks, 1):
+            print(f"{i}. {task.date} - {task.name} ({task.task_type})")
 
     def delete_task(self, task_index: int):
         """ลบงานตามลำดับที่ระบุ"""
@@ -45,9 +45,9 @@ class TaskManager:
         for task in self.task:
             type_counts[task.task] = type_counts.get(task.task_type, 0) + 1
 
-            print("\nสรุปจำนวนงานแต่ละประเภท:")
-            for task_type, count in type_count.item():
-                print(f"- {task_type}: {count} งาน")
+        print("\nสรุปจำนวนงานแต่ละประเภท:")
+        for task_type, count in type_count.item():
+            print(f"- {task_type}: {count} งาน")
 
 def display_menu():
     """แสดงเมนูหลัก"""
