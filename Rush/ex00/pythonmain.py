@@ -20,7 +20,7 @@ class TaskManager:
     def show_all_tasks(self):
         """แสดงรายงานทั้งหมด"""
         if not self.tasks:
-            print.("ยังไม่มีงานในรายการ")
+            print ("ยังไม่มีงานในรายการ")
             return
 
             print("\nรายการงานทั้งหมด:")
@@ -42,14 +42,14 @@ class TaskManager:
             return
 
         type_counts: Dict[str, int] ={}
-        for task inself.task:
+        for task in self.task:
             type_counts[task.task] = type_counts.get(task.task_type, 0) + 1
 
             print("\nสรุปจำนวนงานแต่ละประเภท:")
             for task_type, count in type_count.item():
                 print(f"- {task_type}: {count} งาน")
 
- def display_menu():
+def display_menu():
     """แสดงเมนูหลัก"""
     print("\n" + "="*40)     
     print("Smart Farm Task Organizer")  
@@ -61,7 +61,7 @@ class TaskManager:
     print("5. ออกจากโปรแกรม")
     print("="*40)
 
- def main():
+def main():
     manager = TaskManager()
 
     while True:
